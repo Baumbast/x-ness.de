@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum — X-ness®</title>
-<meta name="robots" content="noindex">
+<title>Was ist ein nativer X-ness-Score? — X-ness®</title>
+<meta name="description" content="Der native Score ist kein Test, den du bestehst oder nicht bestehst. Er ist eine ehrliche Bestandsaufnahme.">
 <style>
 @font-face {
   font-family: 'Non-Elbow-Sans';
@@ -124,11 +124,65 @@ section { padding: var(--sp-xl) var(--pad); }
 .read-inner { max-width: var(--read); margin: 0 auto; }
 .page-wrap { max-width: var(--read); margin: 0 auto; padding: 120px var(--pad) var(--sp-xl); }
 
-.prose h2 { font-size: 28px; margin-top: var(--sp-lg); margin-bottom: var(--sp-sm); }
-.prose h3 { font-size: 20px; margin-top: var(--sp-md); margin-bottom: 8px; color: var(--taupe); font-family: var(--sans); font-weight: 700; }
-.prose p, .prose address { font-weight: 400; font-style: normal; line-height: 1.6; margin-bottom: var(--sp-md); color: var(--taupe); }
-.prose a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
-hr.div { border: none; border-top: 1.5px solid var(--stone); margin: var(--sp-lg) 0; }
+
+article {
+  max-width: 720px; margin: 0 auto;
+  padding: 120px var(--pad) var(--sp-xl);
+}
+.article-meta {
+  display: flex; gap: 24px; align-items: center;
+  margin-bottom: var(--sp-lg);
+  flex-wrap: wrap;
+}
+.article-tag {
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--taupe); border: 1.5px solid var(--stone);
+  padding: 4px 12px; border-radius: 20px;
+}
+.article-date { font-size: 14px; color: var(--stone); }
+.article-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400; color: var(--black);
+  line-height: 1.15; margin-bottom: var(--sp-md);
+}
+.article-lead {
+  font-size: 22px; color: var(--taupe);
+  line-height: 1.5; margin-bottom: var(--sp-xl);
+  padding-bottom: var(--sp-lg);
+  border-bottom: 1.5px solid var(--stone);
+}
+.article-body h2 {
+  font-size: 30px; margin-top: var(--sp-xl); margin-bottom: var(--sp-sm);
+}
+.article-body p {
+  font-size: 20px; color: var(--black); font-weight: 400;
+  line-height: 1.65; margin-bottom: var(--sp-md);
+}
+.article-body blockquote {
+  border-left: 2px solid var(--gold);
+  margin: var(--sp-lg) 0;
+  padding: var(--sp-sm) 0 var(--sp-sm) var(--sp-md);
+  font-style: italic; font-size: 22px;
+  color: var(--taupe); line-height: 1.5;
+}
+.article-cta {
+  margin-top: var(--sp-xl);
+  padding: var(--sp-lg);
+  border: 1.5px solid var(--stone);
+  border-radius: 14px;
+  background: var(--gray);
+  text-align: center;
+}
+.article-cta h3 { font-size: 26px; margin-bottom: var(--sp-sm); }
+.article-cta p { font-size: 16px; margin-bottom: var(--sp-md); }
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 15px; color: var(--taupe); text-decoration: none;
+  margin-bottom: var(--sp-lg);
+  transition: color .2s;
+}
+.back-link:hover { color: var(--black); }
 </style>
 </head>
 <body>
@@ -139,53 +193,59 @@ hr.div { border: none; border-top: 1.5px solid var(--stone); margin: var(--sp-lg
       <li><a href="index.html#warum">Warum X-ness?</a></li>
       <li><a href="index.html#score">Der Score</a></li>
       <li><a href="index.html#dimensionen">Die 5 Dimensionen</a></li>
-      <li><a href="index.html#institutionen">Für Institutionen</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="workbook.html" class="nav-cta">Workbook →</a></li>
     </ul>
   </div>
 </nav>
-<div class="page-wrap">
-  <div class="eyebrow">Rechtliches</div>
-  <h1 style="font-size:56px;margin-bottom:var(--sp-lg);">Impressum</h1>
-  <div class="prose">
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <address>
-      Wolfgang Baumbast<br>
-      X-ness® Publishing<br>
-      Georg-Zoller-Str. 21<br>
-      89584 Ehingen (Donau)<br>
-      Deutschland
-    </address>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:info@x-ness.de">info@x-ness.de</a><br>
-    Web: <a href="https://www.x-ness.de">www.x-ness.de</a></p>
-    <hr class="div">
-    <h2>Markenrecht</h2>
-    <p>X-ness® ist eine eingetragene Marke von Wolfgang Baumbast.<br>
-    DPMA-Registernummer: 30 2024 245 473</p>
-    <hr class="div">
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-    <address>Wolfgang Baumbast<br>Georg-Zoller-Str. 21<br>89584 Ehingen (Donau)</address>
-    <hr class="div">
-    <h2>Urheberrecht</h2>
-    <p>Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht.
-    Alle Workbooks werden unter der Lizenz <strong>CC BY 4.0</strong> veröffentlicht, sofern nicht anders angegeben.</p>
-    <hr class="div">
-    <h2>Haftungsausschluss</h2>
-    <h3>Haftung für Inhalte</h3>
-    <p>Die Inhalte wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit
-    und Aktualität kann keine Gewähr übernommen werden.</p>
-    <h3>Haftung für Links</h3>
-    <p>Diese Website enthält Links zu externen Websites. Für deren Inhalte ist stets der
-    jeweilige Anbieter verantwortlich.</p>
-    <hr class="div">
-    <h2>Streitschlichtung</h2>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:
-    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.<br>
-    Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</p>
+
+<article>
+  <a href="blog.html" class="back-link">← Zurück zum Blog</a>
+
+  <div class="article-meta">
+    <span class="article-tag">X-ness-Score</span>
+    <span class="article-date">Juli 2026</span>
   </div>
-</div>
+
+  <h1 class="article-title">Was ist ein nativer X-ness-Score — und warum hat jeder einen?</h1>
+
+  <p class="article-lead">Der native Score ist kein Test, den du bestehst oder nicht bestehst. Er ist eine ehrliche Bestandsaufnahme dessen, was du bereits mitbringst — ohne Coaching, ohne Entwicklungsarbeit, ohne bewusste Anstrengung.</p>
+
+  <div class="article-body">
+
+    <p>Wenn ich mit Menschen über den X-ness-Score spreche, kommt fast immer dieselbe Reaktion: ein leises Zögern. Die Angst, bewertet zu werden. Die Sorge, nicht gut genug abzuschneiden.</p>
+
+    <p>Das ist verständlich. Und es ist der falsche Blickwinkel.</p>
+
+    <h2>Kein Urteil — eine Bestandsaufnahme</h2>
+
+    <p>Der native X-ness-Score misst, wie stark du dich in der modernen Individualgesellschaft innerlich verankert hast — in fünf Dimensionen: Fitness, Business, Cleverness, Jointliness und Meaningfulness.</p>
+
+    <p>Das Entscheidende: Jeder Mensch hat bereits einen Score. Du hast dein Leben gelebt. Du hast Erfahrungen gemacht, Krisen überstanden, Beziehungen aufgebaut, Entscheidungen getroffen. All das hat dich geformt — und zeigt sich in deinem nativen Profil.</p>
+
+    <blockquote>Der native Score ist nicht das, was du sein könntest. Es ist das, was du bereits bist.</blockquote>
+
+    <h2>Warum die Balance wichtiger ist als der Gesamtwert</h2>
+
+    <p>Ein häufiges Muster: Menschen mit hohen Werten in Cleverness und Business, aber niedrigen in Meaningfulness und Jointliness. Sie sind erfolgreich — und trotzdem unzufrieden. Sie können analytisch denken, aber sie wissen nicht mehr, wofür.</p>
+
+    <p>Das X-ness-System zeigt: Einzelne Spitzenwerte kompensieren keine Schwächen in anderen Dimensionen. Die Gesamtbalance ist entscheidend. Eine hohe Cleverness macht eine schwache Meaningfulness nicht wett — sie macht den Kontrast nur sichtbarer.</p>
+
+    <h2>Der Schritt vom nativen zum qualifizierten Score</h2>
+
+    <p>Der native Score ist der Ausgangspunkt. Der qualifizierte Score ist das Ziel — der Wert, den du durch gezieltes X-nessing erreichst. Nicht in einem Wochenend-Seminar. Sondern durch strukturierte, kontinuierliche Arbeit an den Dimensionen, in denen dein Profil noch Entwicklungspotenzial zeigt.</p>
+
+    <p>Der Lohn: mehr Freiheit, mehr Beziehungsfähigkeit, weniger innere Reibung. Nicht als Versprechen — sondern als strukturelle Konsequenz einer ausgeglichenen Balance.</p>
+
+    <div class="article-cta">
+      <h3>Entdecke deinen nativen Score</h3>
+      <p>Das Selbstinventur-Workbook führt dich in 45–60 Minuten durch alle fünf Dimensionen — mit persönlicher Auswertung.</p>
+      <a href="workbook.html" class="btn-primary">Zum Workbook Typ A →</a>
+    </div>
+
+  </div>
+</article>
+
 <footer>
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">X-ness<sup>®</sup></a>

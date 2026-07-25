@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum — X-ness®</title>
-<meta name="robots" content="noindex">
+<title>Blog — X-ness®</title>
+<meta name="description" content="Gedanken zu X-ness, innerer Stärke, den fünf Dimensionen und dem Leben in der Individualgesellschaft.">
 <style>
 @font-face {
   font-family: 'Non-Elbow-Sans';
@@ -124,11 +124,85 @@ section { padding: var(--sp-xl) var(--pad); }
 .read-inner { max-width: var(--read); margin: 0 auto; }
 .page-wrap { max-width: var(--read); margin: 0 auto; padding: 120px var(--pad) var(--sp-xl); }
 
-.prose h2 { font-size: 28px; margin-top: var(--sp-lg); margin-bottom: var(--sp-sm); }
-.prose h3 { font-size: 20px; margin-top: var(--sp-md); margin-bottom: 8px; color: var(--taupe); font-family: var(--sans); font-weight: 700; }
-.prose p, .prose address { font-weight: 400; font-style: normal; line-height: 1.6; margin-bottom: var(--sp-md); color: var(--taupe); }
-.prose a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
-hr.div { border: none; border-top: 1.5px solid var(--stone); margin: var(--sp-lg) 0; }
+
+/* HERO */
+.blog-hero {
+  padding: 160px var(--pad) var(--sp-xl);
+  border-bottom: 1.5px solid var(--stone);
+}
+.blog-hero h1 { font-size: clamp(42px,5vw,72px); max-width: 18ch; margin-bottom: var(--sp-sm); }
+.blog-hero p { font-size: 20px; max-width: 52ch; margin-bottom: 0; }
+
+/* GRID */
+.blog-grid-wrap { padding: var(--sp-xl) var(--pad); background: var(--gray); }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: var(--sp-lg);
+}
+@media (max-width: 960px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* CARD */
+.blog-card {
+  background: var(--white);
+  border: 1.5px solid var(--stone);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 24px rgba(17,17,17,.06);
+  transition: box-shadow .2s, transform .2s;
+}
+.blog-card:hover {
+  box-shadow: 0 12px 32px rgba(17,17,17,.12);
+  transform: translateY(-2px);
+}
+.blog-card-top {
+  padding: 32px 28px 24px;
+  flex: 1;
+  border-bottom: 1.5px solid var(--stone);
+}
+.blog-card-tag {
+  font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--taupe); margin-bottom: 14px;
+}
+.blog-card-title {
+  font-family: var(--serif);
+  font-size: 22px; font-weight: 400;
+  color: var(--black); line-height: 1.25;
+  margin-bottom: 14px;
+}
+.blog-card-desc {
+  font-size: 15px; color: var(--taupe);
+  line-height: 1.6; margin: 0;
+}
+.blog-card-bottom {
+  padding: 16px 28px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.blog-card-date { font-size: 13px; color: var(--stone); }
+.blog-card-arrow { font-size: 16px; color: var(--black); }
+
+/* NEWSLETTER CTA */
+.newsletter { padding: var(--sp-xl) var(--pad); }
+.newsletter-inner {
+  max-width: 640px; margin: 0 auto; text-align: center;
+  border: 1.5px solid var(--stone); border-radius: 14px; padding: var(--sp-lg);
+}
+.newsletter-inner h2 { font-size: 32px; margin-bottom: var(--sp-sm); }
+.newsletter-inner p { margin-bottom: var(--sp-md); }
+.newsletter-form { display: flex; gap: 12px; max-width: 420px; margin: 0 auto; }
+.newsletter-form input {
+  flex: 1; padding: 12px 16px; border: 1.5px solid var(--stone);
+  border-radius: 10px; font-family: var(--sans); font-size: 16px;
+  color: var(--black); outline: none; transition: border-color .2s;
+}
+.newsletter-form input:focus { border-color: var(--black); }
+.newsletter-note { font-size: 13px; color: var(--stone); margin-top: var(--sp-sm); margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -139,53 +213,80 @@ hr.div { border: none; border-top: 1.5px solid var(--stone); margin: var(--sp-lg
       <li><a href="index.html#warum">Warum X-ness?</a></li>
       <li><a href="index.html#score">Der Score</a></li>
       <li><a href="index.html#dimensionen">Die 5 Dimensionen</a></li>
-      <li><a href="index.html#institutionen">Für Institutionen</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="workbook.html" class="nav-cta">Workbook →</a></li>
     </ul>
   </div>
 </nav>
-<div class="page-wrap">
-  <div class="eyebrow">Rechtliches</div>
-  <h1 style="font-size:56px;margin-bottom:var(--sp-lg);">Impressum</h1>
-  <div class="prose">
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <address>
-      Wolfgang Baumbast<br>
-      X-ness® Publishing<br>
-      Georg-Zoller-Str. 21<br>
-      89584 Ehingen (Donau)<br>
-      Deutschland
-    </address>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:info@x-ness.de">info@x-ness.de</a><br>
-    Web: <a href="https://www.x-ness.de">www.x-ness.de</a></p>
-    <hr class="div">
-    <h2>Markenrecht</h2>
-    <p>X-ness® ist eine eingetragene Marke von Wolfgang Baumbast.<br>
-    DPMA-Registernummer: 30 2024 245 473</p>
-    <hr class="div">
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-    <address>Wolfgang Baumbast<br>Georg-Zoller-Str. 21<br>89584 Ehingen (Donau)</address>
-    <hr class="div">
-    <h2>Urheberrecht</h2>
-    <p>Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht.
-    Alle Workbooks werden unter der Lizenz <strong>CC BY 4.0</strong> veröffentlicht, sofern nicht anders angegeben.</p>
-    <hr class="div">
-    <h2>Haftungsausschluss</h2>
-    <h3>Haftung für Inhalte</h3>
-    <p>Die Inhalte wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit
-    und Aktualität kann keine Gewähr übernommen werden.</p>
-    <h3>Haftung für Links</h3>
-    <p>Diese Website enthält Links zu externen Websites. Für deren Inhalte ist stets der
-    jeweilige Anbieter verantwortlich.</p>
-    <hr class="div">
-    <h2>Streitschlichtung</h2>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:
-    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.<br>
-    Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</p>
+
+<div class="blog-hero">
+  <div class="section-inner">
+    <div class="eyebrow">Blog</div>
+    <h1>Gedanken zu X-ness und innerer Stärke</h1>
+    <p>Kurze und längere Texte zu den fünf Dimensionen, dem X-ness-Score und dem Leben in der Individualgesellschaft.</p>
   </div>
 </div>
+
+<div class="blog-grid-wrap">
+  <div class="section-inner">
+    <div class="eyebrow">Alle Artikel</div>
+    <h2 style="font-size:42px;">Zuletzt erschienen</h2>
+    <div class="blog-grid">
+
+      <a href="blog_nativer_score.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-card-tag">X-ness-Score</div>
+          <div class="blog-card-title">Was ist ein nativer X-ness-Score — und warum hat jeder einen?</div>
+          <p class="blog-card-desc">Der native Score ist kein Test, den du bestehst oder nicht bestehst. Er ist eine ehrliche Bestandsaufnahme dessen, was du bereits mitbringst.</p>
+        </div>
+        <div class="blog-card-bottom">
+          <span class="blog-card-date">Juli 2026</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="blog_fuenf_dimensionen.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-card-tag">Die 5 Dimensionen</div>
+          <div class="blog-card-title">Warum Meaningfulness die unterschätzteste Dimension ist</div>
+          <p class="blog-card-desc">Viele Menschen haben hohe Werte in Fitness, Business und Cleverness — und fühlen sich trotzdem leer. Der Grund liegt fast immer in einer einzigen Dimension.</p>
+        </div>
+        <div class="blog-card-bottom">
+          <span class="blog-card-date">Juli 2026</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="blog_beziehungsfaehigkeit.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-card-tag">Jointliness</div>
+          <div class="blog-card-title">Das Paradox: Wer weniger braucht, ist beziehungsfähiger</div>
+          <p class="blog-card-desc">Innere Stärke macht nicht einsam — sie macht frei. Und diese Freiheit ist die Voraussetzung für echte, gleichwürdige Verbindungen.</p>
+        </div>
+        <div class="blog-card-bottom">
+          <span class="blog-card-date">Juli 2026</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div class="eyebrow" style="justify-content:center;">Newsletter</div>
+    <h2>Neue Artikel direkt ins Postfach</h2>
+    <p>Kein Spam. Kein Algorithmus. Nur neue Texte, wenn sie fertig sind.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="deine@email.de">
+      <button class="btn-primary" type="submit">Anmelden</button>
+    </div>
+    <p class="newsletter-note">Abmeldung jederzeit möglich. Daten werden nicht weitergegeben.</p>
+  </div>
+</div>
+
 <footer>
   <div class="footer-inner">
     <a href="index.html" class="footer-logo">X-ness<sup>®</sup></a>
