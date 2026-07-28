@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X-ness® — Werde, wer du bist</title>
-<meta name="description" content="X-ness misst und entwickelt deine innere Stärke — in fünf Dimensionen. Entdecke deinen nativen X-ness-Score.">
+<meta name="description" content="X-ness macht deine innere Stärke sichtbar und entwickelt sie — in fünf Dimensionen. Entdecke deinen nativen X-ness-Score.">
 <meta property="og:title" content="X-ness® — Werde, wer du bist">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.x-ness.de">
@@ -56,6 +56,60 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+.score-klar { margin-top: var(--sp-xl); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.sk-box { border: 1.5px solid var(--stone); border-radius: 14px; padding: 32px 28px; background: var(--white); }
+.sk-box.sk-nicht { background: transparent; }
+.sk-label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.sk-box ul { list-style: none; margin: 0; padding: 0; }
+.sk-box li { font-size: 16px; color: var(--taupe); line-height: 1.55; padding: 10px 0 10px 20px; position: relative; border-bottom: 1px solid var(--stone); }
+.sk-box li:last-child { border-bottom: none; }
+.sk-box li::before { content: ''; position: absolute; left: 0; top: 20px; width: 8px; height: 1.5px; background: var(--gold); }
+.sk-fazit { grid-column: 1 / -1; border: 1.5px solid var(--stone); border-top: 2px solid var(--gold); border-radius: 14px; padding: 36px 32px; background: var(--white); }
+.sk-fazit h3 { font-family: var(--serif); font-size: 28px; margin-bottom: var(--sp-sm); }
+.sk-fazit p { font-size: 18px; line-height: 1.7; color: var(--taupe); max-width: 68ch; }
+.sk-fazit p + p { margin-top: var(--sp-sm); }
+.sk-fazit strong { color: var(--black); font-weight: 400; }
+@media (max-width: 800px) { .score-klar { grid-template-columns: 1fr; } }
+
+/* DREI HÄUSER */
+.haeuser-band { background: var(--gray); border-top: 1.5px solid var(--stone); }
+.haeuser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: var(--sp-md); }
+.hd-haus {
+  display: block; background: var(--white); border: 1.5px solid var(--stone);
+  border-radius: 14px; padding: 32px 28px; text-decoration: none; color: var(--black);
+  transition: box-shadow .2s;
+}
+a.hd-haus:hover { box-shadow: 0 8px 24px rgba(17,17,17,.12); }
+.hd-hier { background: transparent; }
+.hd-rolle { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.hd-name { display: block; font-family: var(--serif); font-size: 20px; margin-bottom: 10px; }
+.hd-text { font-size: 15px; color: var(--taupe); line-height: 1.6; }
+.hd-marke { display: inline-block; margin-top: 14px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--taupe); border-top: 1.5px solid var(--stone); padding-top: 8px; }
+@media (max-width: 760px) { .haeuser-grid { grid-template-columns: 1fr; } }
+
+/* BRÜCKE */
+.bruecke {
+  margin-top: var(--sp-lg);
+  padding-top: var(--sp-md);
+  border-top: 1.5px solid var(--stone);
+  max-width: var(--read);
+}
+.bruecke p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--taupe);
+  margin-bottom: var(--sp-sm);
+}
+.bruecke a {
+  font-size: 16px;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--stone);
+  padding-bottom: 4px;
+  transition: border-color .2s;
+}
+.bruecke a:hover { border-bottom-color: var(--black); }
+
 /* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -310,7 +364,7 @@ section { padding: var(--sp-xl) var(--pad); }
     <div>
       <div class="eyebrow">X-ness® · Das Entwicklungssystem</div>
       <h1>Werde,<br>wer du <em>bist.</em></h1>
-      <p class="hero-sub">X-ness misst und entwickelt deine innere Stärke — in fünf Dimensionen. Entdecke deinen nativen X-ness-Score und was in dir noch wartet.</p>
+      <p class="hero-sub">X-ness macht deine innere Stärke sichtbar und entwickelt sie — in fünf Dimensionen. Entdecke deinen nativen X-ness-Score und was in dir noch wartet.</p>
       <div class="hero-btns">
         <a href="workbook.html" class="btn-primary">Zum Selbstinventur-Workbook</a>
         <a href="#score" class="btn-secondary">Was ist der X-ness-Score?</a>
@@ -325,7 +379,7 @@ section { padding: var(--sp-xl) var(--pad); }
       <div class="dim-row"><span class="dim-label">Meaningfulness</span><div class="dim-bar-bg"><div class="dim-bar-fill" style="width:45%"></div></div><span class="dim-val">4.5</span></div>
       <div class="score-total">
         <div><div class="score-total-label">Nativer X-ness-Score</div><div class="score-total-val">6.4 <span>/ 10</span></div></div>
-        <div style="font-size:13px;color:var(--taupe);text-align:right;">Potenzial:<br>+ 3.6 Punkte</div>
+        <div style="font-size:13px;color:var(--taupe);text-align:right;">Spannweite: 3,5<br>Meaningfulness tr&auml;gt</div>
       </div>
     </div>
   </div>
@@ -336,6 +390,14 @@ section { padding: var(--sp-xl) var(--pad); }
   <div class="section-inner">
     <div class="eyebrow">Warum X-ness?</div>
     <h2 style="font-size:42px;max-width:22ch;">Die Individualgesellschaft fordert innere Stärke.</h2>
+    <p style="max-width:58ch;margin-top:var(--sp-sm);font-size:18px;">
+      Zwei Entwicklungen laufen gleichzeitig, in entgegengesetzte Richtung.
+      Die Strukturen, die früher Halt gaben, tragen nicht mehr — und zugleich
+      steigen Tempo, Informationsmenge und Zahl der täglichen Entscheidungen.
+      Weniger Stütze bei mehr Last: Wer sich davon erschöpft fühlt, ist nicht schwach.
+      Er steht in einer Zange, die keine Generation vor ihm kannte.
+      Zurückdrehen lässt sie sich nicht. Aushalten schon — wenn die Struktur nach innen wandert.
+    </p>
     <div class="warum-grid">
       <div class="warum-item">
         <div class="warum-num">01</div>
@@ -352,6 +414,15 @@ section { padding: var(--sp-xl) var(--pad); }
         <div class="warum-title">Mehr Erfüllung</div>
         <p class="warum-text">X-nessing — die aktive Arbeit an den eigenen Dimensionen — führt zu weniger innerer Reibung und mehr Energie für das, was zählt.</p>
       </div>
+    </div>
+
+    <div class="bruecke">
+      <p>
+        X-ness ist keine Methode für sich. Es ist die erste von drei Säulen
+        eines größeren Bauplans — für eine Gesellschaft, die sich
+        individualisiert hat, aber noch nicht kultiviert.
+      </p>
+      <a href="https://www.non-elbows.org" target="_blank" rel="noopener">Den Bauplan lesen: non-elbows.org →</a>
     </div>
   </div>
 </section>
@@ -394,6 +465,48 @@ section { padding: var(--sp-xl) var(--pad); }
             <p class="score-effect-text"><strong>Ausgeglichene Balance</strong><span>Die Gesamtbalance aller fünf Dimensionen zählt — nicht einzelne Spitzenwerte.</span></p>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="score-klar">
+      <div class="sk-box">
+        <div class="sk-label">Was der Score ist</div>
+        <ul>
+          <li>Eine Selbsteinschätzung. Du vergibst die Werte, niemand sonst.</li>
+          <li>Ein Raster, das fünf Bereiche nebeneinanderstellt, die man sonst getrennt betrachtet.</li>
+          <li>Ein Blick auf die Balance: Wie weit liegen deine Dimensionen auseinander?</li>
+          <li>Ein Ausgangspunkt, der sich in einem Jahr wieder erheben lässt.</li>
+        </ul>
+      </div>
+      <div class="sk-box sk-nicht">
+        <div class="sk-label">Was er nicht ist</div>
+        <ul>
+          <li>Kein psychologischer Test und keine Diagnose.</li>
+          <li>Kein Urteil von außen über dich.</li>
+          <li>Kein Wettbewerb — es gibt keine Rangliste und niemanden zu schlagen.</li>
+          <li>Kein Weg zur Zehn. Die Zehn ist kein Ziel.</li>
+        </ul>
+      </div>
+
+      <div class="sk-fazit">
+        <h3>Die Balance zählt, nicht die Höhe</h3>
+        <p>
+          Was nützt ein gestählter Körper, wenn die Beziehungen nicht tragen oder das
+          Geld gerade verloren ging? <strong>Ein ausgeglichenes Profil auf bescheidenem
+          Niveau ist mehr wert als ein Spitzenwert neben einem Einbruch.</strong>
+          Deshalb ist die interessanteste Zahl nicht der Durchschnitt, sondern der Abstand
+          zwischen deiner stärksten und deiner schwächsten Dimension. Die schwächste trägt
+          das Profil — nicht die stärkste.
+        </p>
+        <p>
+          Und dann kommt die Frage, an der sich alles entscheidet: Wer baut die Defizite ab?
+          <strong>Niemand. Es kann niemand außer dir selbst.</strong> Kein Coach, kein Partner,
+          kein Staat und kein Programm. Das klingt hart und ist in Wahrheit die gute Nachricht,
+          denn es heißt auch: Du bist nicht darauf angewiesen, dass jemand anfängt.
+          Wer die Verantwortung übernimmt, bekommt etwas dafür — einen höheren Freiheits- und
+          Individualisierungsgrad, mehr Widerstandskraft, mehr Lebensqualität und, ganz nüchtern,
+          mehr Anziehungskraft. Wer wenig Defizite auf andere projiziert, ist der bessere Partner.
+        </p>
       </div>
     </div>
   </div>
@@ -456,7 +569,7 @@ section { padding: var(--sp-xl) var(--pad); }
         <p style="font-size:20px;color:var(--black);margin-bottom:var(--sp-md);">Philosoph. Autor. Gemeinderat. Liberaler.</p>
         <p>Das X-ness-System ist das Ergebnis von über dreißig Jahren Denken, Schreiben und kontemplativer Praxis. Wolfgang Baumbast entwickelte es, weil er eine Lücke sah: zwischen dem, was Menschen wollen, und dem, was ihnen die Gesellschaft anbietet.</p>
         <p>Nicht Ratgeber-Literatur. Nicht Motivationssprüche. Sondern ein strukturiertes System, das aus der Beobachtung entsteht, wie Menschen tatsächlich funktionieren — und warum so viele unter ihrem Potenzial bleiben.</p>
-        <p>X-ness ist in zehn Büchern entfaltet, erschienen bei X-ness® Publishing.</p>
+        <p>Entfaltet ist X-ness im siebenbändigen matriX-eXit-Zyklus — der Analyse — und in den Manualen der Non-Elbow-Society, die die Methode beschreiben. Alle Bände stehen kostenlos zum Download bereit, erschienen bei X-ness® Publishing.</p>
         <a href="https://baumbast.de" class="btn-secondary" style="display:inline-block;margin-top:var(--sp-md);" target="_blank" rel="noopener">Mehr über Wolfgang Baumbast →</a>
       </div>
     </div>
@@ -498,6 +611,32 @@ section { padding: var(--sp-xl) var(--pad); }
     <h2>Entdecke deinen nativen X-ness-Score</h2>
     <p>Das Selbstinventur-Workbook führt dich in 45–60 Minuten durch alle fünf Dimensionen — mit persönlicher Auswertung.</p>
     <a href="workbook.html" class="btn-primary">Zum Workbook Typ A →</a>
+  </div>
+</section>
+
+<!-- DREI HÄUSER -->
+<section class="haeuser-band" aria-label="Ein Werk, drei Orte">
+  <div class="section-inner">
+    <div class="eyebrow">Ein Werk · Drei Orte</div>
+    <h2 style="font-size:30px;">Wo du gerade bist</h2>
+    <div class="haeuser-grid">
+      <a class="hd-haus" href="https://www.baumbast.de" target="_blank" rel="noopener">
+        <span class="hd-rolle">Das Werk</span>
+        <span class="hd-name">baumbast.de →</span>
+        <p class="hd-text">Sieben Bände, Texte, Glossar — die vollständige Analyse.</p>
+      </a>
+      <a class="hd-haus" href="https://www.non-elbows.org" target="_blank" rel="noopener">
+        <span class="hd-rolle">Der Bauplan</span>
+        <span class="hd-name">non-elbows.org →</span>
+        <p class="hd-text">Manifest, Kodex und die Manuale der Bewegung.</p>
+      </a>
+      <div class="hd-haus hd-hier">
+        <span class="hd-rolle">Das Werkzeug</span>
+        <span class="hd-name">x-ness.de</span>
+        <p class="hd-text">Selbstinventur, Score und Workbook für den eigenen Anfang.</p>
+        <span class="hd-marke">Du bist hier</span>
+      </div>
+    </div>
   </div>
 </section>
 
