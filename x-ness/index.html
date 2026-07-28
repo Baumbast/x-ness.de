@@ -71,6 +71,22 @@ body {
 .sk-fazit strong { color: var(--black); font-weight: 400; }
 @media (max-width: 800px) { .score-klar { grid-template-columns: 1fr; } }
 
+.nl-box { max-width: 640px; margin: 0 auto; text-align: center; }
+.nl-form { display: flex; gap: 12px; max-width: 440px; margin: var(--sp-md) auto 0; }
+.nl-form input { width: 100%; padding: 13px 16px; border: 1.5px solid var(--stone); border-radius: 14px; font-family: var(--sans); font-size: 16px; color: var(--black); outline: none; background: var(--white); transition: border-color .2s; }
+.nl-form input:focus { border-color: var(--black); }
+.nl-note { font-size: 13px; color: var(--taupe); margin-top: var(--sp-sm); }
+.nl-note a { color: var(--taupe); }
+.kt-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--sp-xl); margin-top: var(--sp-lg); }
+.kt-row { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1.5px solid var(--stone); font-size: 16px; }
+.kt-row span { color: var(--taupe); }
+.kt-row a { color: var(--black); text-decoration: none; }
+.kt-form { display: flex; flex-direction: column; gap: 16px; }
+.kt-form input, .kt-form textarea { width: 100%; padding: 13px 16px; border: 1.5px solid var(--stone); border-radius: 14px; font-family: var(--sans); font-size: 16px; color: var(--black); outline: none; background: var(--white); transition: border-color .2s; }
+.kt-form input:focus, .kt-form textarea:focus { border-color: var(--black); }
+.kt-form textarea { min-height: 150px; resize: vertical; }
+@media (max-width: 860px) { .kt-grid { grid-template-columns: 1fr; } }
+
 /* DREI HÄUSER */
 .haeuser-band { background: var(--gray); border-top: 1.5px solid var(--stone); }
 .haeuser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: var(--sp-md); }
@@ -353,6 +369,7 @@ section { padding: var(--sp-xl) var(--pad); }
       <li><a href="index.html#dimensionen">Die 5 Dimensionen</a></li>
       <li><a href="index.html#institutionen">Für Institutionen</a></li>
       <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
       <li><a href="workbook.html" class="nav-cta">Workbook →</a></li>
     </ul>
   </div>
@@ -611,6 +628,55 @@ section { padding: var(--sp-xl) var(--pad); }
     <h2>Entdecke deinen nativen X-ness-Score</h2>
     <p>Das Selbstinventur-Workbook führt dich in 45–60 Minuten durch alle fünf Dimensionen — mit persönlicher Auswertung.</p>
     <a href="workbook.html" class="btn-primary">Zum Workbook Typ A →</a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" style="background:var(--gray);">
+  <div class="section-inner">
+    <div class="nl-box">
+      <div class="eyebrow" style="justify-content:center;">Newsletter</div>
+      <h2 style="font-size:clamp(30px,4vw,44px);">Ein Impuls, wenn er trägt.</h2>
+      <p style="max-width:56ch;margin:var(--sp-sm) auto 0;">
+        Kein Wochenrhythmus, keine Verkaufsserie. Der Newsletter kommt, wenn es
+        etwas zu sagen gibt — zu den fünf Dimensionen, zur Praxis des X-nessing
+        und zu dem, was gerade entsteht.
+      </p>
+      <form class="nl-form" action="https://formspree.io/f/xanbqkgw" method="POST">
+        <input type="email" name="email" placeholder="deine@email.de" required autocomplete="email">
+        <input type="hidden" name="quelle" value="x-ness.de Newsletter">
+        <button class="btn btn-dark" type="submit">Anmelden</button>
+      </form>
+      <p class="nl-note">Kein Spam · Abmeldung jederzeit möglich · <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="section-inner">
+    <div class="eyebrow">In Verbindung treten</div>
+    <h2 style="font-size:clamp(34px,4.5vw,52px);">Kontakt</h2>
+    <p style="font-size:19px;max-width:60ch;margin-top:var(--sp-sm);">
+      Für Coaching-Anfragen, Vorträge und Seminare, für Fragen zum Workbook —
+      und für alles, was sich besser im Gespräch klärt als im Formular.
+    </p>
+    <div class="kt-grid">
+      <div>
+        <div class="kt-row"><span>E-Mail</span><a href="mailto:info@baumbast.de">info@baumbast.de</a></div>
+        <div class="kt-row"><span>Ort</span><span style="color:var(--black);">Ehingen (Donau)</span></div>
+        <div class="kt-row"><span>Antwort</span><span style="color:var(--black);">in der Regel binnen 48 Stunden</span></div>
+        <div class="kt-row"><span>Institutionen</span><a href="https://www.x-ness-business.de" target="_blank" rel="noopener">x-ness-business.de</a></div>
+      </div>
+      <form class="kt-form" action="https://formspree.io/f/xanbqkgw" method="POST">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="deine@email.de" required>
+        <input type="text" name="betreff" placeholder="Worum geht es?">
+        <textarea name="nachricht" placeholder="Deine Nachricht" required></textarea>
+        <input type="hidden" name="quelle" value="x-ness.de Kontakt">
+        <button class="btn btn-dark" type="submit">Nachricht senden</button>
+      </form>
+    </div>
   </div>
 </section>
 
