@@ -71,12 +71,12 @@ body {
 .sk-fazit strong { color: var(--black); font-weight: 400; }
 @media (max-width: 800px) { .score-klar { grid-template-columns: 1fr; } }
 
-.nl-box { max-width: 640px; margin: 0 auto; text-align: center; }
-.nl-form { display: flex; gap: 12px; max-width: 440px; margin: var(--sp-md) auto 0; }
-.nl-form input { width: 100%; padding: 13px 16px; border: 1.5px solid var(--stone); border-radius: 14px; font-family: var(--sans); font-size: 16px; color: var(--black); outline: none; background: var(--white); transition: border-color .2s; }
-.nl-form input:focus { border-color: var(--black); }
-.nl-note { font-size: 13px; color: var(--taupe); margin-top: var(--sp-sm); }
-.nl-note a { color: var(--taupe); }
+.imp-box { max-width: 640px; margin: 0 auto; text-align: center; }
+.imp-form { display: flex; gap: 12px; max-width: 440px; margin: var(--sp-md) auto 0; }
+.imp-form input { width: 100%; padding: 13px 16px; border: 1.5px solid var(--stone); border-radius: 14px; font-family: var(--sans); font-size: 16px; color: var(--black); outline: none; background: var(--white); transition: border-color .2s; }
+.imp-form input:focus { border-color: var(--black); }
+.imp-note { font-size: 13px; color: var(--taupe); margin-top: var(--sp-sm); }
+.imp-note a { color: var(--taupe); }
 .kt-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--sp-xl); margin-top: var(--sp-lg); }
 .kt-row { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1.5px solid var(--stone); font-size: 16px; }
 .kt-row span { color: var(--taupe); }
@@ -631,10 +631,10 @@ section { padding: var(--sp-xl) var(--pad); }
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section id="newsletter" style="background:var(--gray);">
+<!-- IMPULS -->
+<section id="impuls" style="background:var(--gray);">
   <div class="section-inner">
-    <div class="nl-box">
+    <div class="imp-box">
       <div class="eyebrow" style="justify-content:center;">Newsletter</div>
       <h2 style="font-size:clamp(30px,4vw,44px);">Ein Impuls, wenn er trägt.</h2>
       <p style="max-width:56ch;margin:var(--sp-sm) auto 0;">
@@ -642,7 +642,7 @@ section { padding: var(--sp-xl) var(--pad); }
         etwas zu sagen gibt — zu den fünf Dimensionen, zur Praxis des X-nessing
         und zu dem, was gerade entsteht.
       </p>
-      <form class="nl-form"
+      <form class="imp-form"
             action="https://1c6696c5.sibforms.com/serve/MUIFAP4FFbZuU2Z3FycgjAkjEIQ_YiAwwCpm3PJRjNflUe5kYH1gD42edz3BgQXDGJrd3qVJXoTlpuljlhKRrrIKpSyTcCm07nJ5UsBKAwrE5kBqXtiWDGD4dU0zwU6ucXfdEt8OvR12m6rIqfT246Ciztn_Fs6FjIHfw1j3yE6uiG4UFFvH7Wrl5PZqO1TSXQ8knCupycS2GGv0uQ=="
             method="POST" target="_blank" novalidate>
         <input type="email" name="EMAIL" placeholder="deine@email.de" required autocomplete="email">
@@ -651,7 +651,7 @@ section { padding: var(--sp-xl) var(--pad); }
                aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
         <input type="hidden" name="locale" value="de">
       </form>
-      <p class="nl-note">Double Opt-in · kein Spam · Abmeldung jederzeit möglich · <a href="datenschutz.html">Datenschutz</a></p>
+      <p class="imp-note">Double Opt-in · kein Spam · Abmeldung jederzeit möglich · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </div>
 </section>
