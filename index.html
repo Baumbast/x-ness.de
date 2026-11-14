@@ -357,6 +357,20 @@ section { padding: var(--sp-xl) var(--pad); }
 .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
 .cta-inner h2 { font-size: 42px; margin-bottom: var(--sp-md); }
 .cta-inner p { margin-bottom: var(--sp-lg); }
+
+/* ── RATGEBER ── */
+.rg-section { background: var(--white); border-top: 1.5px solid var(--stone); }
+.rg-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: var(--sp-xl); align-items: center; }
+.rg-books { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.rg-book { display: block; text-decoration: none; color: var(--black); text-align: center; }
+.rg-book img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 14px 34px rgba(17,17,17,.18); transition: transform .25s, box-shadow .25s; }
+.rg-book:hover img { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(17,17,17,.24); }
+.rg-book span { display: inline-block; margin-top: 18px; font-size: 15px; border-bottom: 1.5px solid var(--stone); padding-bottom: 4px; }
+.rg-book:hover span { border-bottom-color: var(--black); }
+.rg-steps { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--black); margin: var(--sp-md) 0; }
+.rg-steps em { font-style: normal; color: var(--gold); margin: 0 8px; }
+.rg-facts { font-size: 14px; color: var(--taupe); margin-top: var(--sp-sm); }
+@media (max-width: 860px) { .rg-grid { grid-template-columns: 1fr; gap: var(--sp-lg); } .rg-books { max-width: 420px; } }
 </style>
 </head>
 <body>
@@ -368,7 +382,8 @@ section { padding: var(--sp-xl) var(--pad); }
       <li><a href="index.html#score">Der Score</a></li>
       <li><a href="index.html#dimensionen">Die 5 Dimensionen</a></li>
       <li><a href="index.html#institutionen">Für Institutionen</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#ratgeber">Ratgeber</a></li>
+<li><a href="blog.html">Blog</a></li>
       <li><a href="index.html#kontakt">Kontakt</a></li>
       <li><a href="workbook.html" class="nav-cta">Workbook →</a></li>
     </ul>
@@ -591,6 +606,24 @@ section { padding: var(--sp-xl) var(--pad); }
       </div>
     </div>
   </div>
+</section>
+
+<!-- RATGEBER -->
+<section id="ratgeber" class="rg-section">
+<div class="section-inner rg-grid">
+<div>
+<div class="eyebrow">X-ness® Publishing · Neu</div>
+<h2 style="font-size:42px;margin-bottom:var(--sp-md);">Raus aus dem Rosenkrieg.</h2>
+<p style="font-size:20px;color:var(--black);margin-bottom:var(--sp-sm);">Weniger Streit. Mehr Ruhe.</p>
+<p style="font-size:18px;max-width:46ch;">Der Praxisratgeber für hochstrittige Trennungen: eine einfache Drei-Schritte-Methode, die zeigt, wie du aus wiederkehrenden Streitspiralen aussteigst, ohne deine berechtigten Anliegen aufzugeben. In einer eigenen Fassung für Mütter und für Väter.</p>
+<div class="rg-steps">Runterregeln<em>→</em>Klären<em>→</em>Entlasten</div>
+<p class="rg-facts">PDF · 19 Seiten · Sofort-Download · je 29,00 €</p>
+</div>
+<div class="rg-books">
+<a class="rg-book" href="rosenkrieg-muetter.html"><img src="img/cover-muetter.jpg" alt="Raus aus dem Rosenkrieg – Für Mütter" loading="lazy"><span>Für Mütter →</span></a>
+<a class="rg-book" href="rosenkrieg-vaeter.html"><img src="img/cover-vaeter.jpg" alt="Raus aus dem Rosenkrieg – Für Väter" loading="lazy"><span>Für Väter →</span></a>
+</div>
+</div>
 </section>
 
 <!-- BLOG TEASER -->
